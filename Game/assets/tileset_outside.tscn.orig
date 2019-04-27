@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/IMG_0138.PNG" type="Texture" id=1]
+[ext_resource path="res://assets/IMG_0136.PNG" type="Texture" id=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Grass" type="Sprite" parent="."]
+position = Vector2( 32, 32 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 32 )
+
+[node name="Building" type="Sprite" parent="."]
+position = Vector2( 80, 32 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 32 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Building"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Building/StaticBody2D"]
+<<<<<<< HEAD
+polygon = PoolVector2Array( -16, -16, 16, -16, 16, 16, -16, 16 )
+=======
+position = Vector2( 0, 32.0391 )
+polygon = PoolVector2Array( -15.9965, -47.7959, 16.0426, -47.6535, 15.9002, -16.1841, -15.9965, -15.8993 )
+>>>>>>> 5e4c8cf0897eab67dd0bfd2aeb0c9176c69822fc
+
