@@ -47,7 +47,7 @@ func get_input():
 		$AnimatedSprite.frame = 0
 		$AnimatedSprite.stop()
 		
-	print(velocity)
+	#print(velocity)
 		
 func _on_Player_body_entered(body):
 	print("Collided")

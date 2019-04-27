@@ -8,9 +8,9 @@ var health = 1500
 export(int) var max_health = 5100
 
 func _ready():
-	health = max_health
 	emit_signal("health_changed", health)
 	emit_signal("max_health_changed", max_health)
+	GameManager.connect("regen_blood", self, "_on_Health_regen_blood")
 
 func take_damage(amount):
 	health -= amount
@@ -19,5 +19,9 @@ func take_damage(amount):
 
 func heal(amount):
 	health += amount
-	health = max(health, max_health)
+	health = min(health, max_health)
 	emit_signal("health_changed", health)
+
+func _on_Health_regen_blood(amount):
+	print(health)
+	heal(amount)

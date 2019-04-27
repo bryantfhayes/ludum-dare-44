@@ -19,6 +19,10 @@ config/name="LudumDare44"
 run/main_scene="res://scenes/MainMenu.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+GameManager="*res://scripts/GameManager.gd"
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"
