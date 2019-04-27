@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/IMG_0136.PNG" type="Texture" id=2]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
-points = PoolVector2Array( -8, -40, 8, -40, 8, -24, -8, -24 )
+points = PoolVector2Array( -15.9965, -47.7959, 16.0426, -47.6535, 15.9002, -16.1841, -15.9965, -15.8993 )
 
 [resource]
 0/name = "Grass"
@@ -30,7 +30,7 @@ points = PoolVector2Array( -8, -40, 8, -40, 8, -24, -8, -24 )
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 1 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16 )
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 48.0391 )
 } ]
 1/z_index = 0
 

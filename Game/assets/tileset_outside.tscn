@@ -20,5 +20,6 @@ region_rect = Rect2( 0, 0, 32, 32 )
 [node name="StaticBody2D" type="StaticBody2D" parent="Building"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Building/StaticBody2D"]
-polygon = PoolVector2Array( -8, -40, 8, -40, 8, -24, -8, -24 )
+position = Vector2( 0, 32.0391 )
+polygon = PoolVector2Array( -15.9965, -47.7959, 16.0426, -47.6535, 15.9002, -16.1841, -15.9965, -15.8993 )
 
