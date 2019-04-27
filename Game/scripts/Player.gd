@@ -55,8 +55,6 @@ func _process(delta):
 func _on_Player_body_entered(body):
 	print("Collided")
 
-
-
 func _on_Player_area_entered(area):
 	print("collide")
 	pass # replace with function body

@@ -1,12 +1,12 @@
 [gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://scripts/Player.gd" type="Script" id=1]
-[ext_resource path="res://sprites/bryant/bryant-side-0.png" type="Texture" id=2]
-[ext_resource path="res://sprites/bryant/bryant-side-1.png" type="Texture" id=3]
-[ext_resource path="res://sprites/bryant/bryant-side-2.png" type="Texture" id=4]
-[ext_resource path="res://sprites/bryant/bryant-up-0.png" type="Texture" id=5]
-[ext_resource path="res://sprites/bryant/bryant-up-1.png" type="Texture" id=6]
-[ext_resource path="res://sprites/bryant/bryant-up-2.png" type="Texture" id=7]
+[ext_resource path="res://sprites/bryant/bryant-up-0.png" type="Texture" id=2]
+[ext_resource path="res://sprites/bryant/bryant-up-1.png" type="Texture" id=3]
+[ext_resource path="res://sprites/bryant/bryant-up-2.png" type="Texture" id=4]
+[ext_resource path="res://sprites/bryant/bryant-side-0.png" type="Texture" id=5]
+[ext_resource path="res://sprites/bryant/bryant-side-1.png" type="Texture" id=6]
+[ext_resource path="res://sprites/bryant/bryant-side-2.png" type="Texture" id=7]
 [ext_resource path="res://sprites/bryant/bryant-down-0.png" type="Texture" id=8]
 [ext_resource path="res://sprites/bryant/bryant-down-1.png" type="Texture" id=9]
 [ext_resource path="res://sprites/bryant/bryant-down-2.png" type="Texture" id=10]
@@ -15,17 +15,17 @@
 animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
 "loop": true,
-"name": "left",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
-"loop": true,
-"name": "right",
+"name": "up",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
 "loop": true,
-"name": "up",
+"name": "left",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "right",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
