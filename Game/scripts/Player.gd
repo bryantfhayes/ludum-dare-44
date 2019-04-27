@@ -1,4 +1,4 @@
-extends Area2D
+extends KinematicBody2D
 
 signal hit
 
@@ -12,11 +12,12 @@ var screensize
 # var a = 2
 # var b = "textvar"
 
+var velocity = Vector2()
 func _ready():
 	screensize = get_viewport_rect().size
 
-func _process(delta):
-	var velocity = Vector2()
+func get_input():
+	velocity = Vector2()
 	if Input.is_action_pressed("ui_right"):
 		$AnimatedSprite.flip_h = false
 		$AnimatedSprite.animation = "right"
@@ -39,17 +40,15 @@ func _process(delta):
 		$AnimatedSprite.frame = 0
 		$AnimatedSprite.stop()
 		
+	
+	print(velocity)
+		
 
-	position += velocity * delta
-	position.x = clamp(position.x, 0, screensize.x)
-	position.y = clamp(position.y, 0, screensize.y)
-
-
-func _on_Player_body_entered(body):
-	print("Collided")
-
+	#position += velocity * delta
+	#position.x = clamp(position.x, 0, screensize.x)
+	#position.y = clamp(position.y, 0, screensize.y)
 
 
-func _on_Player_area_entered(area):
-	print("collide")
-	pass # replace with function body
+func _physics_process(delta):
+    get_input()
+    move_and_collide(velocity * delta)
