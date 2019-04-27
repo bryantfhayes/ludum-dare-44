@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/outside_tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://interface/bar/LifeBar.tscn" type="PackedScene" id=3]
-[ext_resource path="res://interface/counter/Counter.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/Health.gd" type="Script" id=3]
+[ext_resource path="res://scenes/Purse.gd" type="Script" id=4]
+[ext_resource path="res://interface/bar/LifeBar.tscn" type="PackedScene" id=5]
+[ext_resource path="res://interface/counter/Counter.tscn" type="PackedScene" id=6]
 
 [node name="Node2D" type="Node2D"]
 
@@ -17,14 +19,20 @@ tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 
 position = Vector2( 552, 296 )
 speed = 200
 
-[node name="LifeBar" parent="." instance=ExtResource( 3 )]
+[node name="Health" type="Node" parent="Player"]
+script = ExtResource( 3 )
+
+[node name="Purse" type="Node" parent="Player"]
+script = ExtResource( 4 )
+
+[node name="LifeBar" parent="." instance=ExtResource( 5 )]
 margin_left = 16.0
 margin_top = 16.0
 margin_right = 566.0
 margin_bottom = 69.0
 rect_scale = Vector2( 0.75, 0.75 )
 
-[node name="Counter" parent="." instance=ExtResource( 4 )]
+[node name="Counter" parent="." instance=ExtResource( 6 )]
 margin_left = 880.0
 margin_top = 16.0
 margin_right = 1044.0
@@ -33,3 +41,6 @@ rect_scale = Vector2( 0.75, 0.75 )
 
 [node name="Townsperson_1" type="Sprite" parent="."]
 
+[connection signal="health_changed" from="Player/Health" to="LifeBar" method="_on_Health_health_changed"]
+[connection signal="max_health_changed" from="Player/Health" to="LifeBar" method="_on_Health_max_health_changed"]
+[connection signal="gold_changed" from="Player/Purse" to="Counter" method="_on_Purse_gold_changed"]

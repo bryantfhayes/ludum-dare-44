@@ -12,6 +12,13 @@ var screensize
 # var a = 2
 # var b = "textvar"
 
+func _unhandled_input(event):
+	if event is InputEventKey:
+		if event.pressed and event.scancode == KEY_B:
+			$Health.take_damage(100)
+		if event.pressed and event.scancode == KEY_G:
+			$Purse.add_gold(100)
+
 func _ready():
 	screensize = get_viewport_rect().size
 
