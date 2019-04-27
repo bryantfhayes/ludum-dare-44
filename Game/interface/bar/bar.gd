@@ -2,18 +2,18 @@ extends HBoxContainer
 
 signal maximum_changed(maximum)
 
-var maximum = 100
-var current_health = 0
+var maximum = 5100.0
+var current_health = 1500.0
 
 func initialize(max_value):
 	maximum = max_value
 	emit_signal("maximum_changed", maximum)
-
-func _on_Interface_health_updated(new_health):
+	
+func _on_Health_health_changed(new_health):
 	animate_value(current_health, new_health)
 	update_count_text(new_health)
 	current_health = new_health
-
+	
 func animate_value(start, end):
 	$Tween.interpolate_property($TextureProgress, "value", start, end, 0.5, Tween.TRANS_ELASTIC, Tween.EASE_OUT)
 	$Tween.interpolate_method(self, "update_count_text", start, end, 0.5, Tween.TRANS_LINEAR, Tween.EASE_OUT)
@@ -22,4 +22,8 @@ func animate_value(start, end):
 		$AnimationPlayer.play("shake")
 
 func update_count_text(value):
-	$Count/Number.text = str(round(value)) + '/' + str(maximum)
+	$Count/Number.text = "%3.1f" % (float(value) / 1000)+ '/' + "%3.1f" % (float(maximum) / 1000)
+
+func _on_Health_max_health_changed(health):
+	maximum = health
+	emit_signal("maximum_changed", maximum)

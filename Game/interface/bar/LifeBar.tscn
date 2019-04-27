@@ -104,10 +104,11 @@ margin_left = -107.0
 margin_top = -20.5
 margin_right = -8.0
 margin_bottom = 19.5
+rect_clip_content = true
 theme = ExtResource( 4 )
 text = "1.2/5.1"
-align = 2
 valign = 2
+clip_text = true
 
 [node name="TextureProgress" type="TextureProgress" parent="."]
 margin_left = 154.0
