@@ -30,6 +30,9 @@ func _on_Health_health_changed(health):
 		self.modulate.a = (opacity_threshold - health_node.health) * opacity_multiplier
 		if health_node.health <= 0:
 			get_tree().change_scene("res://scenes/GameOver.tscn")
+	else:
+		self.modulate.a = 0
+		
 			
 	
 	pass # Replace with function body.
