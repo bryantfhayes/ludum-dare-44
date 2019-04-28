@@ -6,12 +6,12 @@ extends Area2D
 
 var attachedBody = null
 var bloodAmount = 100
-var goldPerDonation = 17
+var goldPerDonation = 1.7
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	set_process(true)
-	var text = "Press 'e' to sell %d ml of blood\nfor %d gold"
+	var text = "Press 'e' to sell %d ml of blood\nfor $%.2f"
 	get_node("InteractLbl").text = text % [bloodAmount, goldPerDonation]
 	get_node("InteractLbl").visible = false
 	pass # Replace with function body.

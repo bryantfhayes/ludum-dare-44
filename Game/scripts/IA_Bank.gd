@@ -7,12 +7,12 @@ extends Area2D
 var attachedBody = null
 var offset = Vector2(10.0, -25.0)
 var interest_gain = 0.01
-var interest_upgrade = 1000
+var interest_upgrade = 100
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	set_process(true)
-	var text = "Press 'e' to increase interest \n rate (%.3f for %d gold coins)"
+	var text = "Press 'e' to increase interest \n rate (%.3f for $%d)"
 	get_node("InteractLbl").text = text % [interest_gain, interest_upgrade]
 	get_node("InteractLbl").visible = false
 	pass # Replace with function body.
@@ -30,7 +30,7 @@ func _process(delta):
 				purse_node.interest_rate += interest_gain
 				interest_upgrade = interest_upgrade * 2
 				
-				var text = "Press 'e' to increase interest \n rate (%.3f for %d gold coins)"
+				var text = "Press 'e' to increase interest \n rate (%.3f for $%d)"
 				get_node("InteractLbl").text = text % [interest_gain, interest_upgrade]
 
 func _on_Area2D_body_entered(body):

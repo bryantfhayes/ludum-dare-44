@@ -607,8 +607,14 @@ margin_bottom = 620.964
 color = Color( 0.666667, 0, 0, 1 )
 script = ExtResource( 14 )
 
-[connection signal="health_changed" from="Player/Health" to="LifeBar" method="_on_Health_health_changed"]
+[node name="HighColorShader" type="ColorRect" parent="."]
+visible = false
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 1, 0.780392, 0.196078, 0.231373 )
+
 [connection signal="health_changed" from="Player/Health" to="ColorRect" method="_on_Health_health_changed"]
+[connection signal="health_changed" from="Player/Health" to="LifeBar" method="_on_Health_health_changed"]
 [connection signal="max_health_changed" from="Player/Health" to="LifeBar" method="_on_Health_max_health_changed"]
 [connection signal="gold_changed" from="Player/Purse" to="Counter" method="_on_Purse_gold_changed"]
 [connection signal="body_entered" from="IA_Bloodbank" to="IA_Bloodbank" method="_on_Area2D_body_entered"]
