@@ -25,9 +25,16 @@ func _process(delta):
 			var node = self.owner
 			var player_node = node.get_node("Player")
 			var health_node = player_node.get_node("Health")
-			$BloodSound.play()
+			
+<<<<<<< HEAD
+			if health_node.health - bloodAmount >= 0:
+				$AudioStreamPlayer2D.play()
+				player_node.get_node("Health").take_damage(bloodAmount)
+				player_node.get_node("Purse").add_gold(goldPerDonation)
+=======
 			player_node.get_node("Health").take_damage(bloodAmount)
 			player_node.get_node("Purse").add_gold(goldPerDonation)
+>>>>>>> 9d7625c604616e2b4c40a7906eb401360f1bba07
 
 func _on_Area2D_body_entered(body):
 	if body.get_name() == "Player":
