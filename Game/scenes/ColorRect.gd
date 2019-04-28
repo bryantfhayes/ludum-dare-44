@@ -10,6 +10,7 @@ var health_node
 var max_health
 var opacity_thresh_hold = 0.15
 var opacity_percent = 0
+var opacity_multiplier = 0.001
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -25,7 +26,9 @@ func _on_Health_health_changed(health):
 	health_node = player_node.get_node("Health")
 	max_health = health_node.max_health
 	var opacity_threshold = max_health * opacity_thresh_hold
+	print(max_health)
+	print(opacity_threshold)
 	if health_node.health < opacity_threshold:
-		self.modulate.a = (opacity_threshold - health_node.health) * .100
+		self.modulate.a = (opacity_threshold - health_node.health) * opacity_multiplier
 	
 	pass # Replace with function body.
