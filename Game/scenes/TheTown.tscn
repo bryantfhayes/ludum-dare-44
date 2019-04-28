@@ -255,6 +255,8 @@ script = ExtResource( 3 )
 
 [node name="Purse" type="Node" parent="Player"]
 script = ExtResource( 4 )
+interest_rate = 0.002
+starting_gold = 100
 
 [node name="LifeBar" parent="." instance=ExtResource( 5 )]
 margin_left = 16.0
