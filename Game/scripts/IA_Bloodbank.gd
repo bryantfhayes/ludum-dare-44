@@ -28,6 +28,7 @@ func _process(delta):
 			var health_node = player_node.get_node("Health")
 			
 			if health_node.health - bloodAmount >= 0:
+				$AudioStreamPlayer2D.play()
 				player_node.get_node("Health").take_damage(bloodAmount)
 				player_node.get_node("Purse").add_gold(goldPerDonation)
 

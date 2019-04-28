@@ -36,8 +36,10 @@ func _process(delta):
 			if purse_node.gold - foodCostAmount >=0:
 				health_node.heal(bloodRestoreAmount)
 				player_node.get_node("Purse").remove_gold(foodCostAmount)
+				$EatingSound.play()
 		if Input.is_action_just_pressed("ui_drug"):
 			if purse_node.gold - drugCostAmount >=0:
+				$DrugSound.play()
 				purse_node.remove_gold(drugCostAmount)
 				manager_node.bloodRegenMlPerSecond += bloodRegenUpgradeAmount
 

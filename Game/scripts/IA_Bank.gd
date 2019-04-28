@@ -25,6 +25,7 @@ func _process(delta):
 		var purse_node = player_node.get_node("Purse")
 		if Input.is_action_just_pressed("ui_interact"):
 			if purse_node.gold - interest_upgrade >= 0:
+				$CashRegisterSound.play()
 				purse_node.remove_gold(interest_upgrade)
 				purse_node.interest_rate += interest_gain
 

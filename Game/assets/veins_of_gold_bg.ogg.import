@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/veins_of_gold_bg.ogg-2c64bc3a685654fb20705efe09a3a6b7.oggstr"
+
+[deps]
+
+source_file="res://assets/veins_of_gold_bg.ogg"
+dest_files=[ "res://.import/veins_of_gold_bg.ogg-2c64bc3a685654fb20705efe09a3a6b7.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
