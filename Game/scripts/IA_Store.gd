@@ -7,11 +7,17 @@ extends Area2D
 var attachedBody = null
 var offset = Vector2(10.0, -25.0)
 
+# TODO Export these?
+var bloodRestoreAmount = 100
+var foodCostAmount = 300
+var drugCostAmount = 3000
+var bloodRegenUpgradeAmount = 100
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	attachedBody = null
 	set_process(true)
-	get_node("InteractLbl").text = "Press 'e' to Enter Store"
+	get_node("InteractLbl").text = "Press 'f' to buy food, 'd' to buy drugs"
 	get_node("InteractLbl").visible = false
 	pass # Replace with function body.
 
@@ -19,8 +25,21 @@ func _ready():
 func _process(delta):
 	if attachedBody != null:
 		get_node("InteractLbl").rect_global_position = attachedBody.position + offset
-		if Input.is_action_just_pressed("ui_interact"):
-			print("INTERACTED WITH STORE")
+		
+		var node = self.owner
+		var player_node = node.get_node("Player")
+		var health_node = player_node.get_node("Health")
+		var purse_node = player_node.get_node("Purse")
+		var manager_node = node.get_node("/root/GameManager")
+		
+		if Input.is_action_just_pressed("ui_food"):
+			if purse_node.gold - foodCostAmount >=0:
+				health_node.heal(bloodRestoreAmount)
+				player_node.get_node("Purse").remove_gold(foodCostAmount)
+		if Input.is_action_just_pressed("ui_drug"):
+			if purse_node.gold - drugCostAmount >=0:
+				purse_node.remove_gold(drugCostAmount)
+				manager_node.bloodRegenMlPerSecond += bloodRegenUpgradeAmount
 
 func _on_Area2D_body_entered(body):
 	if body.get_name() == "Player":
