@@ -281,9 +281,10 @@ position = Vector2( 3.59998, 12 )
 polygon = PoolVector2Array( -22, -12, 42, -12, 42, 52, -22, 52 )
 
 [node name="InteractLbl" type="Label" parent="IA_Bloodbank"]
-margin_left = 20.0
-margin_right = 143.0
-margin_bottom = 14.0
+margin_left = -83.5501
+margin_top = -179.55
+margin_right = 39.4499
+margin_bottom = -165.55
 rect_scale = Vector2( 1.25, 1.25 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Press 'e' to interact"
@@ -297,9 +298,10 @@ position = Vector2( 3.59998, 12 )
 polygon = PoolVector2Array( -22, -12, 42, -12, 42, 52, -22, 52 )
 
 [node name="InteractLbl" type="Label" parent="IA_Store"]
-margin_left = 20.0
-margin_right = 143.0
-margin_bottom = 14.0
+margin_left = -81.6502
+margin_top = -170.05
+margin_right = 41.3498
+margin_bottom = -156.05
 rect_scale = Vector2( 1.25, 1.25 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Press 'e' to interact"
@@ -313,9 +315,10 @@ position = Vector2( 3.59998, 12 )
 polygon = PoolVector2Array( -22, -12, 42, -12, 42, 52, -22, 52 )
 
 [node name="InteractLbl" type="Label" parent="IA_Bank"]
-margin_left = 20.0
-margin_right = 143.0
-margin_bottom = 14.0
+margin_left = -66.4501
+margin_top = -153.9
+margin_right = 56.5499
+margin_bottom = -139.9
 rect_scale = Vector2( 1.25, 1.25 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Press 'e' to interact"
