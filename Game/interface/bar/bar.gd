@@ -16,7 +16,6 @@ func _on_Health_health_changed(new_health):
 	
 func animate_value(start, end):
 	$Tween.interpolate_property($TextureProgress, "value", start, end, 0.5, Tween.TRANS_ELASTIC, Tween.EASE_OUT)
-	$Tween.interpolate_method(self, "update_count_text", start, end, 0.5, Tween.TRANS_LINEAR, Tween.EASE_OUT)
 	$Tween.start()
 	if end < start:
 		$AnimationPlayer.play("shake")
