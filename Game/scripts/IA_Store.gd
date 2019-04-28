@@ -17,7 +17,8 @@ var bloodRegenUpgradeAmount = 100
 func _ready():
 	attachedBody = null
 	set_process(true)
-	get_node("InteractLbl").text = "Press 'f' to buy food, 'd' to buy drugs"
+	var text = "Press 'f' to buy food (%d gold), 'd' to buy drugs (%d gold)"
+	get_node("InteractLbl").text = text % [foodCostAmount, drugCostAmount]
 	get_node("InteractLbl").visible = false
 	pass # Replace with function body.
 
