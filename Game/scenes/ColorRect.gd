@@ -29,7 +29,6 @@ func _on_Health_health_changed(health):
 	if health_node.health < opacity_threshold:
 		self.modulate.a = (opacity_threshold - health_node.health) * opacity_multiplier
 		if health_node.health <= 0:
-			$DeathSound.play()
 			get_tree().change_scene("res://scenes/GameOver.tscn")
 			
 	

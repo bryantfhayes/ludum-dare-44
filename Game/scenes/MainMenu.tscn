@@ -20,7 +20,7 @@ margin_right = 782.0
 margin_bottom = 320.0
 texture = ExtResource( 2 )
 
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="playBtn" type="TextureButton" parent="."]
 margin_left = 304.0
 margin_top = 368.0
 margin_right = 704.0
@@ -28,7 +28,7 @@ margin_bottom = 438.0
 texture_normal = ExtResource( 3 )
 script = ExtResource( 4 )
 
-[node name="TextureButton2" type="TextureButton" parent="."]
+[node name="howtoBtn" type="TextureButton" parent="."]
 margin_left = 304.0
 margin_top = 464.0
 margin_right = 704.0
@@ -36,5 +36,5 @@ margin_bottom = 534.0
 texture_normal = ExtResource( 5 )
 script = ExtResource( 4 )
 
-[connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_TextureButton_pressed"]
-[connection signal="pressed" from="TextureButton2" to="TextureButton2" method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="playBtn" to="playBtn" method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="howtoBtn" to="howtoBtn" method="_on_TextureButton_pressed"]
