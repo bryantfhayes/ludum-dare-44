@@ -12,14 +12,15 @@ var goldPerDonation = 100
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	set_process(true)
-	get_node("InteractLbl").text = "Press 'e' to Enter Bloodbank"
+	var text = "Press 'e' to sell %d ml of blood\nfor %d gold"
+	get_node("InteractLbl").text = text % [bloodAmount, goldPerDonation]
 	get_node("InteractLbl").visible = false
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if attachedBody != null:
-		get_node("InteractLbl").rect_global_position = attachedBody.position + offset
+		
 		if Input.is_action_just_pressed("ui_interact"):
 			print("INTERACTED WITH BLOODBANK")
 			var node = self.owner

@@ -17,7 +17,7 @@ var bloodRegenUpgradeAmount = 100
 func _ready():
 	attachedBody = null
 	set_process(true)
-	var text = "Press 'f' to buy food (%d gold), 'd' to buy drugs (%d gold)"
+	var text = "Press 'f' to buy food (%d gold), \n'd' to buy drugs (%d gold)"
 	get_node("InteractLbl").text = text % [foodCostAmount, drugCostAmount]
 	get_node("InteractLbl").visible = false
 	pass # Replace with function body.
@@ -25,7 +25,6 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if attachedBody != null:
-		get_node("InteractLbl").rect_global_position = attachedBody.position + offset
 		
 		var node = self.owner
 		var player_node = node.get_node("Player")

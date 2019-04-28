@@ -17,7 +17,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if attachedBody != null:
-		get_node("InteractLbl").rect_global_position = attachedBody.position + offset
+		
 		if Input.is_action_just_pressed("ui_interact"):
 			print("INTERACTED WITH BANK")
 
