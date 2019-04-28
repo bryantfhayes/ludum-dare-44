@@ -7,7 +7,7 @@ extends Area2D
 var attachedBody = null
 
 # TODO Export these?
-var bloodRestoreAmount = 1100
+var bloodRestoreAmount = 1800
 var foodCostAmount = 300
 var drugCostAmount = 3000
 var bloodRegenUpgradeAmount = 350

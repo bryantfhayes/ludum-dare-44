@@ -28,6 +28,10 @@ func _process(delta):
 				$CashRegisterSound.play()
 				purse_node.remove_gold(interest_upgrade)
 				purse_node.interest_rate += interest_gain
+				interest_upgrade = interest_upgrade * 2
+				
+				var text = "Press 'e' to increase interest \n rate (%.3f for %d gold coins)"
+				get_node("InteractLbl").text = text % [interest_gain, interest_upgrade]
 
 func _on_Area2D_body_entered(body):
 	if body.get_name() == "Player":

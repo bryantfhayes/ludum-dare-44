@@ -43,4 +43,6 @@ ui_drug={
 
 [rendering]
 
-environment/default_environment="res://default_env.tres"
+quality/driver/fallback_to_gles2=true
+quality/intended_usage/framebuffer_allocation=1
+quality/directional_shadow/size=256
