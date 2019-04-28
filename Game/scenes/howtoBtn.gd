@@ -5,4 +5,5 @@ func _ready():
 	pass
 
 func _on_howtoBtn_pressed():
-	get_tree().change_scene("res://scenes/HowTo.tscn")
+	var retval = get_tree().change_scene("res://scenes/HowTo.tscn")
+	print(retval)

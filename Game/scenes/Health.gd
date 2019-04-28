@@ -2,10 +2,11 @@ extends Node
 
 signal health_changed(health)
 signal max_health_changed(health)
-signal health_depleted
 
-var health = 1500
-export(int) var max_health = 5100
+export (int) var starting_health = 3000
+export (int) var max_health = 5100
+
+var health = starting_health
 
 func _ready():
 	emit_signal("health_changed", health)

@@ -14,4 +14,5 @@ func _ready():
 
 
 func _on_mainMenuBtn_pressed():
-	get_tree().change_scene("res://scenes/MainMenu.tscn")
+	var retval = get_tree().change_scene("res://scenes/MainMenu.tscn")
+	print(retval)

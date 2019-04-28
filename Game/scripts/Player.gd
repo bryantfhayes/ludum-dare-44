@@ -1,7 +1,5 @@
 extends KinematicBody2D
 
-signal hit
-
 # How fast the player will move (pixels/sec)
 export (int) var speed
 
@@ -14,7 +12,9 @@ var screensize
 
 var velocity = Vector2()
 func _unhandled_input(event):
-	pass
+	if event is InputEventKey:
+		if event.pressed and event.scancode == KEY_ESCAPE:
+			get_tree().change_scene("res://scenes/MainMenu.tscn")
 
 func _ready():
 	screensize = get_viewport_rect().size
@@ -53,4 +53,4 @@ func _on_Player_area_entered(area):
 
 func _physics_process(delta):
     get_input()
-    move_and_collide(velocity * delta)
+    var retval = move_and_collide(velocity * delta)

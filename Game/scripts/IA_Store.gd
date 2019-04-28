@@ -5,7 +5,6 @@ extends Area2D
 # var b = "text"
 
 var attachedBody = null
-var offset = Vector2(10.0, -25.0)
 
 # TODO Export these?
 var bloodRestoreAmount = 1100

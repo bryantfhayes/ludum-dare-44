@@ -3,9 +3,9 @@
 [ext_resource path="res://scenes/GameOver.gd" type="Script" id=1]
 [ext_resource path="res://assets/sounds/death-sound.wav" type="AudioStream" id=2]
 [ext_resource path="res://assets/gameover_bg.png" type="Texture" id=3]
-[ext_resource path="res://assets/gameoverLbl.png" type="Texture" id=4]
+[ext_resource path="res://assets/youdiedLbl.png" type="Texture" id=4]
 [ext_resource path="res://assets/playAgainBtn.png" type="Texture" id=5]
-[ext_resource path="res://scenes/TextureButton.gd" type="Script" id=6]
+[ext_resource path="res://scenes/playAgainBtn.gd" type="Script" id=6]
 [ext_resource path="res://assets/mainMenuBtn.png" type="Texture" id=7]
 [ext_resource path="res://scenes/mainMenuBtn.gd" type="Script" id=8]
 
@@ -22,9 +22,9 @@ margin_bottom = 40.0
 texture = ExtResource( 3 )
 
 [node name="titleLbl" type="TextureRect" parent="."]
-margin_left = 176.0
+margin_left = 192.0
 margin_top = 144.0
-margin_right = 855.0
+margin_right = 871.0
 margin_bottom = 256.0
 texture = ExtResource( 4 )
 
@@ -44,5 +44,5 @@ margin_bottom = 534.0
 texture_normal = ExtResource( 7 )
 script = ExtResource( 8 )
 
-[connection signal="pressed" from="playAgainBtn" to="playAgainBtn" method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="playAgainBtn" to="playAgainBtn" method="_on_playAgainBtn_pressed"]
 [connection signal="pressed" from="mainMenuBtn" to="mainMenuBtn" method="_on_mainMenuBtn_pressed"]
