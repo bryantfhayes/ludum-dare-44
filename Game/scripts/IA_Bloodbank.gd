@@ -22,14 +22,12 @@ func _process(delta):
 	if attachedBody != null:
 		
 		if Input.is_action_just_pressed("ui_interact"):
-			print("INTERACTED WITH BLOODBANK")
 			var node = self.owner
 			var player_node = node.get_node("Player")
 			var health_node = player_node.get_node("Health")
 			
-			if health_node.health - bloodAmount >= 0:
-				player_node.get_node("Health").take_damage(bloodAmount)
-				player_node.get_node("Purse").add_gold(goldPerDonation)
+			player_node.get_node("Health").take_damage(bloodAmount)
+			player_node.get_node("Purse").add_gold(goldPerDonation)
 
 func _on_Area2D_body_entered(body):
 	if body.get_name() == "Player":

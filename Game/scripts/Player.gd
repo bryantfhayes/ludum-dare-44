@@ -14,11 +14,7 @@ var screensize
 
 var velocity = Vector2()
 func _unhandled_input(event):
-	if event is InputEventKey:
-		if event.pressed and event.scancode == KEY_B:
-			$Health.take_damage(100)
-		if event.pressed and event.scancode == KEY_G:
-			$Purse.add_gold(100)
+	pass
 
 func _ready():
 	screensize = get_viewport_rect().size
