@@ -4,5 +4,5 @@ extends TextureButton
 func _ready():
 	pass
 
-func _on_playBtn_pressed():
-	get_tree().change_scene("res://scenes/TheTown.tscn")
+func _on_howtoBtn_pressed():
+	get_tree().change_scene("res://scenes/HowTo.tscn")

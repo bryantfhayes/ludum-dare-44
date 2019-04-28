@@ -5,7 +5,6 @@ extends Area2D
 # var b = "text"
 
 var attachedBody = null
-var offset = Vector2(10.0, -25.0)
 var bloodAmount = 100
 var goldPerDonation = 17
 
@@ -24,7 +23,6 @@ func _process(delta):
 		if Input.is_action_just_pressed("ui_interact"):
 			var node = self.owner
 			var player_node = node.get_node("Player")
-			var health_node = player_node.get_node("Health")
 			$BloodSound.play()
 			player_node.get_node("Health").take_damage(bloodAmount)
 			player_node.get_node("Purse").add_gold(goldPerDonation)
