@@ -23,5 +23,4 @@ func heal(amount):
 	emit_signal("health_changed", health)
 
 func _on_Health_regen_blood(amount):
-	print(health)
 	heal(amount)

@@ -26,8 +26,6 @@ func _on_Health_health_changed(health):
 	health_node = player_node.get_node("Health")
 	max_health = health_node.max_health
 	var opacity_threshold = max_health * opacity_thresh_hold
-	print(max_health)
-	print(opacity_threshold)
 	if health_node.health < opacity_threshold:
 		self.modulate.a = (opacity_threshold - health_node.health) * opacity_multiplier
 		if health_node.health <= 0:

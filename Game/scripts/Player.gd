@@ -46,10 +46,9 @@ func get_input():
 	#print(velocity)
 		
 func _on_Player_body_entered(body):
-	print("Collided")
+	pass
 
 func _on_Player_area_entered(area):
-	print("collide")
 	pass # replace with function body
 
 func _physics_process(delta):
