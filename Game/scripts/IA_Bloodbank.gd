@@ -6,8 +6,8 @@ extends Area2D
 
 var attachedBody = null
 var offset = Vector2(10.0, -25.0)
-var bloodAmount = 300
-var goldPerDonation = 100
+var bloodAmount = 100
+var goldPerDonation = 15
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

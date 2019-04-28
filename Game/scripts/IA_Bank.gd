@@ -7,7 +7,7 @@ extends Area2D
 var attachedBody = null
 var offset = Vector2(10.0, -25.0)
 var interest_gain = 0.01
-var interest_upgrade = 200
+var interest_upgrade = 1000
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
