@@ -8,10 +8,10 @@ var attachedBody = null
 var offset = Vector2(10.0, -25.0)
 
 # TODO Export these?
-var bloodRestoreAmount = 100
+var bloodRestoreAmount = 1100
 var foodCostAmount = 300
 var drugCostAmount = 3000
-var bloodRegenUpgradeAmount = 100
+var bloodRegenUpgradeAmount = 350
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
